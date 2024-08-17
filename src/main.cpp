@@ -1,18 +1,29 @@
+/***************************************************
+ * @author : András Székely
+ * @date : 2024-08-17
+ * @product : Weather Station and MQTT broker sender
+ * @details : Measurement the outside environment parameters 
+ *            and sendinvia MQTT broker to house system for further processing
+****************************************************/
 #include <Arduino.h>
+#include <stdlib.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include "Config.h"
+#include "Singleton.h"
+#include "Observer.h" // Include the Observer header
+#include "main.h"
+#include "EEPROMManager.h"
 
+
+DataSender& dataSender = DataSender::getInstance();
+
+
+#include <Arduino.h>
 void setup() {
   // put your setup code here, to run once:
-  int result = myFunction(2, 3);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
